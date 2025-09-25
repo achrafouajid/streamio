@@ -1,4 +1,5 @@
 import { icons } from "@/constants/icons";
+import { images } from "@/constants/images";
 import { useRouter } from "expo-router";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -7,7 +8,12 @@ const Save = () => {
   const router = useRouter();
 
   return (
-    <SafeAreaView className="bg-primary flex-1 px-10">
+    <SafeAreaView className="bg-primary flex-1">
+         <Image
+        source={images.bg}
+        className="flex-1 absolute w-full z-0"
+        resizeMode="cover"
+      />
       <View className="flex justify-center items-center flex-1 flex-col gap-5">
         <Image source={icons.save} className="size-10" tintColor="#fff" />
         <Text className="text-gray-500 text-base">No saved movies for the moment</Text>

@@ -10,7 +10,6 @@ const Profile = () => {
   const handleLogin = () => {
     console.log("Login with Google");
   };
-  };
 
   return (
     <SafeAreaView className="bg-primary flex-1">

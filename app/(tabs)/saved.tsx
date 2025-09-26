@@ -18,7 +18,6 @@ const Save = () => {
         <Image source={icons.save} className="size-10" tintColor="#fff" />
         <Text className="text-gray-500 text-base">No saved movies for the moment</Text>
 
-        {/* Link to Home */}
         <TouchableOpacity
           onPress={() => router.push("/")}
           className="mt-4 bg-accent px-6 py-3 rounded-xl"

@@ -10,10 +10,10 @@ const Profile = () => {
   const handleLogin = () => {
     console.log("Login with Google");
   };
+  };
 
   return (
     <SafeAreaView className="bg-primary flex-1">
-      {/* Background */}
       <Image
         source={images.bg}
         className="absolute w-full h-full z-0"
@@ -21,7 +21,6 @@ const Profile = () => {
       />
 
       <View className="flex-1 justify-center items-center gap-8 z-10">
-        {/* Top section: Avatar + Basic Info */}
         <View className="flex-row items-center gap-4">
           <View className="w-20 h-20 rounded-full bg-secondary justify-center items-center">
             <Image source={icons.person} className="w-10 h-10" tintColor="#fff" />
@@ -32,7 +31,6 @@ const Profile = () => {
           </View>
         </View>
 
-        {/* Other Info */}
         <View className="w-full px-4 gap-6">
           <View className="flex-row justify-between items-center">
             <Text className="text-white text-base">Country</Text>
@@ -52,7 +50,6 @@ const Profile = () => {
             <Text className="text-blue-400 text-base">Help & Support</Text>
           </TouchableOpacity>
 
-          {/* Google Sign-in button */}
           <TouchableOpacity
             onPress={handleLogin}
             className="flex-row items-center bg-white px-5 py-3 rounded-2xl mt-4 self-start"

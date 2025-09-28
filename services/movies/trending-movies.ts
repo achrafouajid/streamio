@@ -1,5 +1,3 @@
-// trending-movies.ts (offline, static, single file)
-
 export interface Movie {
     id: number;
     title: string;
@@ -112,7 +110,6 @@ export interface Movie {
   // --- In-memory trending storage ---
   let trendingStore: TrendingMovie[] = [];
   
-  // --- Helpers ---
   const randInt = (min: number, max: number) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
   
@@ -140,9 +137,7 @@ export interface Movie {
   
   // --- Get trending movies (randomized order + random boost to counts) ---
   export const getTrendingMovies = async (): Promise<TrendingMovie[]> => {
-    // ensure trendingStore has some base data
     if (trendingStore.length === 0) {
-      // seed with random movies from dataset
       trendingStore = MOVIES.slice(0, 5).map((m) => ({
         searchTerm: m.title.toLowerCase(),
         movie_id: m.id,
@@ -152,7 +147,6 @@ export interface Movie {
       }));
     }
   
-    // shuffle for randomness
     const shuffled = [...trendingStore].sort(() => 0.5 - Math.random());
   
     // simulate evolving counts

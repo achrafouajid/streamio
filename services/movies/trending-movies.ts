@@ -23,7 +23,6 @@ export interface Movie {
     poster_url: string;
   }
   
-  // --- Static movie dataset (expand as you wish) ---
   const MOVIES: Movie[] = [
     {
       id: 872585,
@@ -149,12 +148,10 @@ export interface Movie {
   
     const shuffled = [...trendingStore].sort(() => 0.5 - Math.random());
   
-    // simulate evolving counts
     shuffled.forEach((m) => {
-      m.count += randInt(0, 3); // small random bump each call
+      m.count += randInt(0, 3);
     });
   
-    // return top 5
     return shuffled.slice(0, 5);
   };
   

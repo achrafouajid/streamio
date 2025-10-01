@@ -106,13 +106,11 @@ export interface Movie {
     },
   ];
   
-  // --- In-memory trending storage ---
   let trendingStore: TrendingMovie[] = [];
   
   const randInt = (min: number, max: number) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
   
-  // --- Update search count (offline, local memory) ---
   export const updateSearchCount = async (
     query: string,
     movie: Movie
